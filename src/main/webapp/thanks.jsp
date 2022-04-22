@@ -15,9 +15,9 @@
   <h1>Thank you very much for joining our list!</h1>
   <p>Here is the information that you entered:</p><br>
   
-  <h6>E-mail: </h6><p>${user.email}</p><br>
-  <h6>First name: </h6><p>${user.firstName}</p><br>
-  <h6>Last name: </h6><p>${user.lastName}</p><br>
+  <h3>E-mail: </h3><p>${user.email}</p><br>
+  <h3>First name: </h3><p>${user.firstName}</p><br>
+  <h3>Last name: </h3><p>${user.lastName}</p><br>
   
   <p>To enter a new e-mail, press the return button bellow.</p>
   
