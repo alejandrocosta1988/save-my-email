@@ -25,7 +25,7 @@ public class EmailListServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String url = "/index.html";
+		String url = "/index.jsp";
 		String action = request.getParameter("action");
 		
 		if (action == null) {
@@ -34,7 +34,7 @@ public class EmailListServlet extends HttpServlet {
 		
 		if (action.equalsIgnoreCase("join")) {
 			
-			url = "/index.html"; //the join page
+			url = "/index.jsp"; //the join page
 			
 		} else if (action.equalsIgnoreCase("add")) {
 			
@@ -43,10 +43,23 @@ public class EmailListServlet extends HttpServlet {
 			String email = request.getParameter("email");
 			
 			User user = new User(firstName, lastName, email);
+			String message = "";
+			
+			if (firstName == null || lastName == null || email == null ||
+					firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
+				
+				message = "Please complete the requested information.";
+				url = "/index.jsp";
+				
+			} else {
+				
+				url = "/thanks.jsp"; //the thanks page
+				
+			}
 			
 			//sets user object in request object and sets the url
 			request.setAttribute("user", user);
-			url = "/thanks.jsp"; //the thanks page
+			request.setAttribute("message", message);
 			
 		}
 		
