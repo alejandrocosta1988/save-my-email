@@ -3,29 +3,9 @@
   <display-name>save-my-email</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-  </welcome-file-list><servlet>
-    <description></description>
-    <display-name>EmailListServlet</display-name>
-    <servlet-name>EmailListServlet</servlet-name>
-    <servlet-class>servlets.EmailListServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>EmailListServlet</servlet-name>
-    <url-pattern>/emailList</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>EmailListServlet</servlet-name>
-    <url-pattern>/email/*</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>testServlet</display-name>
-    <servlet-name>testServlet</servlet-name>
-    <servlet-class>servlets.testServlet</servlet-class>
-  </servlet><servlet-mapping>
-    <servlet-name>testServlet</servlet-name>
-    <url-pattern>/test</url-pattern>
-  </servlet-mapping>
+  </welcome-file-list>
+  
+  
   
   
   
