@@ -19,7 +19,10 @@
   <h3>First name: </h3><p>${user.firstName}</p><br>
   <h3>Last name: </h3><p>${user.lastName}</p><br>
   
-  <p>To enter a new e-mail, press the return button bellow.</p>
+  <p>
+    To enter a new e-mail, press the return button bellow or just click 
+      <a href="emailList?action=join">here</a>.
+  </p>
   
   <form action="" method="get">
     <input type="hidden" name="action" value="join">
