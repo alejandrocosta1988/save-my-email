@@ -23,12 +23,22 @@ public class User implements Serializable {
 	}
 	
 	public boolean isValid() {
-		if (firstName != null && !firstName.isEmpty() && 
-				lastName!= null && !lastName.isEmpty() && 
-				email != null && !email.isEmpty()) {
+		if (isAttributesNotNull() && isAttributesNotEmpty()) {
 			return true;
 		}
 		return false;
+	}
+	
+	private boolean isAttributesNotNull() {
+		return firstName != null &&
+				lastName != null &&
+				email != null;
+	}
+	
+	private boolean isAttributesNotEmpty() {
+		return !firstName.isEmpty() &&
+				!lastName.isEmpty() &&
+				!email.isEmpty();
 	}
 
 	public String getFirstName() {
