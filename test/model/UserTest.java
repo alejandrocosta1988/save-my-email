@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 class UserTest {
+	
+	private String firstName;
 
 	@Test
 	void isValidReturnsFalseWhenSomeAttributeIsNotProvided() {
@@ -27,6 +29,15 @@ class UserTest {
 		user.setEmail("teste@email.com");
 		
 		assertTrue(user.isValid());
+		
+	}
+	
+	@Test
+	void isValidReturnsFalseWhenSomettributeIsDefinedAsNull() {
+		
+		User user = new User(firstName, "Teste", "teste@email.com");
+		
+		assertFalse(user.isValid());
 		
 	}
 
