@@ -45,15 +45,14 @@ public class EmailListServlet extends HttpServlet {
 			User user = new User(firstName, lastName, email);
 			String message = "";
 			
-			if (firstName == null || lastName == null || email == null ||
-					firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
+			if (user.isValid()) {
 				
-				message = "Please complete the requested information.";
-				url = "/index.jsp";
+				url = "/thanks.jsp"; //the thanks page
 				
 			} else {
 				
-				url = "/thanks.jsp"; //the thanks page
+				message = "Please complete the requested information.";
+				url = "/index.jsp";
 				
 			}
 			

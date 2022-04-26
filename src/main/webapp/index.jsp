@@ -21,11 +21,11 @@
       <input type="hidden" name="action" value="add">
     
       <label>E-mail</label>
-      <input type="email" name="email" value="${user.email}">
+      <input type="email" name="email" value="${user.email}" required>
       <label>First name</label>
-      <input type="text" name="first-name" value="${user.firstName}">
+      <input type="text" name="first-name" value="${user.firstName}" required>
       <label>Last name</label>
-      <input type="text" name="last-name" value="${user.lastName}">
+      <input type="text" name="last-name" value="${user.lastName}" required>
       <label>&nbsp;</label>
       <input type="submit" value="Join Now">
     
