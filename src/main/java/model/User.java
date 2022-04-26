@@ -23,6 +23,11 @@ public class User implements Serializable {
 	}
 	
 	public boolean isValid() {
+		if (!firstName.isEmpty() && 
+				!lastName.isEmpty() && 
+				!email.isEmpty()) {
+			return true;
+		}
 		return false;
 	}
 
