@@ -21,6 +21,10 @@ public class User implements Serializable {
 		this.lastName = lastName;
 		this.email = email;
 	}
+	
+	public boolean isValid() {
+		return false;
+	}
 
 	public String getFirstName() {
 		return firstName;
