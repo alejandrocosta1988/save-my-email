@@ -6,10 +6,9 @@
 
   <head>
   
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <jsp:include page="includes/head.html"></jsp:include>
     <title>Save My E-mail!</title>
-  
+      
   </head>
   
   <body>
@@ -18,7 +17,7 @@
     <p>To join our e-mail list, enter your name and e-mail address below.</p>
     
     <c:if test="${!message.isEmpty()}">
-      <p><i>${message}</i></p>
+      <p class="error-message-text"><i>${message}</i></p>
     </c:if>
     
     <form action="emailList" method="post">
