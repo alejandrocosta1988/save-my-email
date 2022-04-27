@@ -29,6 +29,10 @@
     <input type="hidden" name="action" value="join">
     <input type="submit" value="Return">
   </form>
+  
+  <footer>
+    <jsp:include page="includes/footer.jsp"></jsp:include>
+  </footer>
 
 </body>
 </html>
