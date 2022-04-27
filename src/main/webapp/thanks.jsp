@@ -18,6 +18,7 @@
   <h3>E-mail: </h3><p>${user.email}</p><br>
   <h3>First name: </h3><p>${user.firstName}</p><br>
   <h3>Last name: </h3><p>${user.lastName}</p><br>
+  <h3>Date of submission: </h3><p>${date.toString()}</p><br>
   
   <p>
     To enter a new e-mail, press the return button bellow or just click 

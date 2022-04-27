@@ -1,6 +1,7 @@
 package servlets;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -41,6 +42,7 @@ public class EmailListServlet extends HttpServlet {
 			String firstName = request.getParameter("first-name");
 			String lastName = request.getParameter("last-name");
 			String email = request.getParameter("email");
+			LocalDate localDate = LocalDate.now();
 			
 			User user = new User(firstName, lastName, email);
 			String message = "";
@@ -59,6 +61,7 @@ public class EmailListServlet extends HttpServlet {
 			//sets user object in request object and sets the url
 			request.setAttribute("user", user);
 			request.setAttribute("message", message);
+			request.setAttribute("date", localDate);
 			
 		}
 		
