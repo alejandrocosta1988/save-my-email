@@ -5,7 +5,6 @@
 <head>
 
   <jsp:include page="includes/head.html"></jsp:include>
-  <title>Just Joined!</title>
   
 </head>
 

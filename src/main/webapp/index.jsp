@@ -7,7 +7,6 @@
   <head>
   
     <jsp:include page="includes/head.html"></jsp:include>
-    <title>Save My E-mail!</title>
       
   </head>
   
